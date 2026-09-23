@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="DiceRoll.css">
+    <link rel="shortcut icon" href="gamble.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+</head>
+<body>
+    
+    <div class="bar">
+        <h1>Dice Roller</h1>
+        <p class="funFact">"It's all fun and games until someone rolls a 1."</p>
+    </div>
+    <div class="cont">
+
+        <div class="info">
+            <label ># of dice: </label>
+            <input id="diceNum" value="1" min="1" max="20" type="number">
+            <br>
+            <button onclick="rollDice()">Roll</button>
+        </div>
+
+        <div class="dice">
+            <div id="diceRes"></div>
+            <div id="diceImg"></div>
+        </div>
+
+    </div>
+
+    <script src="DiceRoll.js"></script>
+</body>
+</html>

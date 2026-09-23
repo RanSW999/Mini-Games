@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="rock-paper-scissors.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="RPS.css">
+    <title>Rock—Paper—Scissor</title>
+</head>
+<body>
+    <div class="cont">
+        <h1 class="round">Round: 0</h1>
+        <div class="action">
+            <div class="user">
+                You
+                <div id="user-img" class="img">🖖</div>
+            </div>
+            <div class="computer">
+                Computer
+                <div id="comp-img" class="img">👌</div>
+            </div>
+        </div>
+        <p class="disp">Got time for a game?</p>
+
+        <div class="op">
+            <button onclick="Play('Rock')" id="Rock">🪨</button>
+            <button onclick="Play('Paper')" id="Paper">🧻</button>
+            <button onclick="Play('Scissor')" id="Scissor">✂️</button>
+        </div>
+        <div class="history">
+            <span id="wins">Won:</span>
+            <span id="draws">Draw:</span>
+            <span id="loses">Lost:</span>
+        </div>
+    </div>
+    <script src="RPS.js"></script>
+</body>
+</html>
