@@ -58,11 +58,23 @@ button{
     font-size: 30px;
     font-weight: bold;
 }
+#diceImg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+}
 
 #diceImg img{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+    width: clamp(60px, 15vw, 200px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    margin: 0;
+    flex: 0 1 auto;
     animation: rollIn 0.3s ease-out;
 }
 @keyframes rollIn {
@@ -87,4 +99,65 @@ button{
     border: 0;
     background: #fda9c8;
     color: #3A0519;
+}
+@media screen and (max-width: 700px) {
+    .bar {
+        height: auto;
+        min-height: 120px;
+        padding: 10px 12px 20px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: clamp(30px, 8vw, 42px);
+        padding-top: 10px;
+    }
+
+    .funFact {
+        font-size: clamp(14px, 4vw, 20px);
+        padding-top: 12px;
+    }
+
+    .cont {
+        grid-template-columns: minmax(0, 1fr);
+        min-height: auto;
+        gap: 20px;
+        padding: 0 12px 30px;
+    }
+
+    .info {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
+    .info input {
+        max-width: 100%;
+        width: 90px;
+        font-size: 18px;
+    }
+
+    button {
+        width: min(260px, 85%);
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 12px;
+        font-size: 24px;
+        display: block;
+    }
+
+    .dice {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #diceRes {
+        font-size: clamp(18px, 5vw, 26px);
+        overflow-wrap: anywhere;
+        margin-bottom: 20px;
+    }
+
+    #diceImg img {
+        width: clamp(60px, 22vw, 140px);
+        max-width: 100%;
+    }
 }
